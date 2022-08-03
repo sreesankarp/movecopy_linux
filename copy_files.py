@@ -1,3 +1,4 @@
+#copy_paste
 import os
 
 _destination_path = input('Enter destination path : ')
@@ -17,7 +18,7 @@ if _confirm_prompt=='y':
     print("Process Started, Please wait!")
     for i,file in enumerate(_total_files):
         try:
-            command = f'{"cp" if _mode == "c" else "mv"} {_source_path}* {_destination_path}'
+            command = f'{"cp" if _mode == "c" else "mv"} {_source_path}{file} {_destination_path}'
             os.system(command)
             if i%_checkpoint==0:
                 print("Progress : ",int(i/_total_len),"%")
