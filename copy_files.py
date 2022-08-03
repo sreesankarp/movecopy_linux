@@ -21,6 +21,6 @@ if _confirm_prompt=='y':
             command = f'{"cp" if _mode == "c" else "mv"} {_source_path}{file} {_destination_path}'
             os.system(command)
             if i%_checkpoint==0:
-                print("Progress : ",int(i/_total_len),"%")
+                print("Progress : ",int((i/_total_len)*100),"%")
         except Exception as x:
             print(" --> Error : ",x)
