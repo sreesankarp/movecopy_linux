@@ -1,4 +1,3 @@
-from distutils.cmd import Command
 import os
 
 _destination_path = input('Enter destination path : ')
